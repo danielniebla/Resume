@@ -2,7 +2,6 @@ import React from 'react';
 import { FaLongArrowAltUp } from "react-icons/fa";
 import Exp1 from '../components/experienceText.tsx';
 import Exp2 from '../components/experienceDate.tsx';
-import colage from '../assets/colage.png';
 import stat from '../assets/static.webp';
 import trev from '../assets/trev.webp';
 import cecsin from '../assets/cecsin.png';

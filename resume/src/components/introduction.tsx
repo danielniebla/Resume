@@ -13,7 +13,7 @@ const Intro: React.FC<imgLeft> = ({title, text, img, horientation}) => {
     { horientation ?
       (<div className="grid-1-5 py-4 justify-center items-center">
         <div className="br ">
-          <img src={img} alt="descriptive image" className="rounded-2xl none rounded-br-none rounded-tr-none " />
+          <img src={img} alt="descriptive" className="rounded-2xl none rounded-br-none rounded-tr-none " />
         </div>
         <div className="box-1 rounded-2xl p-4 rounded-bl-none rounded-tl-none">
           <h2 className=" font-semibold">{title}</h2>
@@ -27,7 +27,7 @@ const Intro: React.FC<imgLeft> = ({title, text, img, horientation}) => {
           <p>{text}</p>
         </div>
         <div className=" bl">
-          <img src={img} alt="descriptive image" className="rounded-2xl none rounded-bl-none rounded-tl-none" />
+          <img src={img} alt="descriptive " className="rounded-2xl none rounded-bl-none rounded-tl-none" />
         </div>
       </div>)
     }
