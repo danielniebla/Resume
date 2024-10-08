@@ -1,4 +1,4 @@
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Deploy Jekyll with GitHub Pages
 
 on:
   push:
@@ -26,24 +26,19 @@ jobs:
         with:
           enablement: true
 
-      # Instalar Ruby y Bundler
+      # Instalar Ruby y Jekyll directamente sin usar Bundler
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.0'  # Puedes cambiar la versión de Ruby si tu proyecto lo requiere
+          ruby-version: '3.0'
 
-      # Instalar las dependencias de Bundler
-      - name: Install Bundler
-        run: gem install bundler
-
-      - name: Install Jekyll dependencies
-        run: bundle install
-        working-directory: ./resume
+      - name: Install Jekyll
+        run: gem install jekyll
 
       - name: Build with Jekyll
         run: |
           cd resume
-          bundle exec jekyll build --destination ../_site
+          jekyll build --destination ../_site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
