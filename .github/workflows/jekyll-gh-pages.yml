@@ -20,17 +20,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
+
+      # Instalar Ruby y Bundler
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'  # Puedes cambiar la versión de Ruby si tu proyecto lo requiere
+
+      # Instalar las dependencias de Bundler
+      - name: Install Bundler
+        run: gem install bundler
+
       - name: Install Jekyll dependencies
         run: bundle install
         working-directory: ./resume
+
       - name: Build with Jekyll
         run: |
           cd resume
           bundle exec jekyll build --destination ../_site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
