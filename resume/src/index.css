@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --background: #C2E4FB;
+  --foreground: #182228;
+  --darkBase: #1B262C;
+  --midBlue: #3282B8;
+  --blue: #0F4C75;
+  --lightMidBlue: #478FBF;
+}
+
+@media only screen and (max-width: 768px) {
+  .none{
+    display: none;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.text-bg{
+  color: var(--background);
+}
+.bg-b{
+  background: var(--blue) ;
+}
+.bg-db{
+  background: var(--darkBase) ;
+}
+.bg-mbb{
+  background: var(--midBlue) ;
+}
+.lmb{
+  color: var(--lightMidBlue);
+}
+@media only screen and (min-width: 768px) {
+  .grid-5-1{
+    display: grid;
+    grid-template-columns: 6fr 1fr ;
+    gap: .5rem;
+  }
+  .grid-1-5{
+    display: grid;
+    grid-template-columns: 1fr 6fr ;
+    gap: .5rem;
+  }
+  .bl{
+    padding-left: .5rem ;
+    border-left: 2px dashed #A8CBE1;
+  }
+  .br{
+    padding-right:.5rem ;
+    border-right: 2px dashed #A8CBE1;
+  }
+  .lifeLine{
+    display: grid;
+    grid-template-columns: 10fr 1fr 10fr;
+  }
+  .skills{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto); 
+    grid-template-areas: 
+      "a a a a"
+      "b c c d"
+      "b e e e";
+    gap: 1rem; 
+  }
+  .a{
+    grid-area: a;
+  }
+  .b{
+    grid-area: b;
+  }
+  .c{
+    grid-area: c;
+  }
+  .d{
+    grid-area: d;
+  }
+  .e{
+    grid-area: e;
+  }
+}
+
+
+.box-1{
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(168,203,225,1);
+  -moz-box-shadow: 2px 2px 6px 0px rgba(168,203,225,1);
+  box-shadow: 2px 2px 6px 0px rgba(168,203,225,1);
+}
+.bb{
+  border-bottom: 2px dashed #A8CBE1;
+}
+h2{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+h1{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
