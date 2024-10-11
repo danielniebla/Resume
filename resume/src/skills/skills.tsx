@@ -1,9 +1,13 @@
 import React from 'react';
+import Gito from '../components/getInTouch.tsx';
 
 const Skills = () => 
-<div className='skills'>
+<div className='skills p-4'>
     <div className='a box-1 rounded-2xl p-4'>
-        <h2 className='font-bold'>Skills</h2>
+        <div className="flex">
+            <h2 className='font-bold'>Skills</h2>
+            <Gito/>
+        </div>
         <p>I am a skilled software engineer with experience in full-stack development, proficient in front-end technologies like React and Angular, 
             as well as back-end frameworks such as Nest.js and Django. My expertise includes optimizing user experience and creating intuitive applications, 
             with a strong focus on responsive design and data management. I am committed to continuous learning and aspire to deepen my skills in front-end 
