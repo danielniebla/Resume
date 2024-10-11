@@ -49,6 +49,9 @@ body {
 .bg-mbb{
   background: var(--midBlue) ;
 }
+.bg-lmb{
+  background: var(--lightMidBlue) ;
+}
 .lmb{
   color: var(--lightMidBlue);
 }
@@ -101,7 +104,9 @@ body {
     grid-area: e;
   }
 }
-
+.f13{
+  font-size: 13px;
+}
 
 .box-1{
   -webkit-box-shadow: 2px 2px 6px 0px rgba(168,203,225,1);

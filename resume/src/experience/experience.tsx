@@ -8,13 +8,17 @@ import cecsin from '../assets/cecsin.png';
 import paint from '../assets/paint.png';
 import uas from '../assets/uas.png';
 import spiral from '../assets/spiral.webp';
+import Gito from '../components/getInTouch.tsx';
 
 
 const Experience = () => 
 <div className='p-4'>
-    <div className="box-1 rounded-2xl p-4 ">
+    <div className="box-1 rounded-2xl p-4 flex">
+        <div>
             <h2 className=" font-semibold">My personal and profesional projects</h2>
             <p>These are projects I completed in both personal and professional environments, serving as proof of my knowledge and skills.</p>
+        </div>
+        <Gito  />
     </div>    
     <div className='lifeLine py-4 items-center gap-4'>
         {/* proyecto web de generacion de paginas estaticas*/}
@@ -28,8 +32,8 @@ const Experience = () =>
          <Exp2 date='15/12/69' img={cecsin} horientation={true}></Exp2>
         <FaLongArrowAltUp className='h-14 p-0 m-auto none' />
         <Exp1 title='Cecsin a web for school' 
-            textOne='This project involved developing a web-based program similar to Paint, using only JavaScript and no external libraries. I implemented the functionality by painting pixel by pixel on a canvas, calculating geometric shape logic for tasks such as moving, transforming, and rotating shapes, among other features.' 
-            textTwo="This was a significant achievement, as I had to leverage all my programming knowledge to ensure the app's performance and efficiency."
+            textOne='Built for a private school using React and Nest.js, this system manages students, teachers, and courses, featuring enrollment, tuition payments, cash closing, and CRUD operations. I joined when the backend was 70-80% done, and the frontend 25-35% complete. My role focused on testing and integrating components to ensure everything worked cohesively.' 
+            textTwo="This project was a valuable experience as it allowed me to work closely with the client, focusing on their design needs, desired features, and overall project requirements. Collaborating directly with the client also helped in clearly defining the project’s deadlines."
             link='https://brayhan.notion.site/visual-portfolio-e22433c3f63c442eadfd593f9b59cfc7?pvs=4' />
         {/* trevber */}
         <Exp1 title='Tester and mobile developer trevber project' 
