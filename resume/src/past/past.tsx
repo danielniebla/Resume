@@ -20,6 +20,12 @@ const Past = () =>
         img={wal}
         horientation={false}
         ></Intro>
+        <Intro
+        title='Water Station Attendant' 
+        text='My second job, from 2016 to 2018, was as a Water Station Attendant. In this role, I improved my soft skills by interacting with different types of people, who in this case were clients. This experience helped me grow in customer service and further develop my communication skills.'
+        img={wal}
+        horientation={true}
+        ></Intro>
     </div>
 </div>;
 
