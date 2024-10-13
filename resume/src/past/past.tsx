@@ -16,7 +16,7 @@ const Past = () =>
     <div className='p-8'> Working on it, I hope you are already interested... <Gito/>
     <Intro
         title='Event Furniture Delivery' 
-        text='My first job, from 2012 to 2016 (when I was 12 to 16 years old), was as an Event Furniture Delivery person. During this time, I discovered my strength in engaging warmly with clients and developed a strong sense of responsibility.'
+        text='My first job, from 2012 to 2016 (when I was 12 to 16 years old), was as an Event Furniture Delivery person. During this time, I discovered my strength in engaging warmly with clients and developed a strong sense of responsibility. This role ended when my boss found another job and closed the business.'
         img={wal}
         horientation={false}
         ></Intro>
