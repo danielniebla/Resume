@@ -21,7 +21,7 @@ const Intro: React.FC<imgLeft> = ({title, text, img, horientation}) => {
             <h2 className=" font-semibold">{title}</h2>
             <Gito/>
           </div>
-          <div>{text} </div>
+          <p className="text-justify">{text} </p>
         </div>
       </div>)
     :
@@ -31,7 +31,7 @@ const Intro: React.FC<imgLeft> = ({title, text, img, horientation}) => {
             <h2 className=" font-semibold">{title}</h2>
             <Gito/>
           </div>
-          <p>{text} </p>
+          <p className="text-justify">{text} </p>
         </div>
         <div className=" bl">
           <img src={img} alt="descriptive " className="rounded-2xl none rounded-bl-none rounded-tl-none" />
