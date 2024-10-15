@@ -5,7 +5,7 @@ interface skilsprops{
     Language:boolean;
 }
 
-const Skills: React.FC<skillsprops> = ({Language}) => {
+const Skills: React.FC<skilsprops> = ({Language}) => {
     return (
         <div className='skills p-4'>
             <div className='a box-1 rounded-2xl p-4'>
