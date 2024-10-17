@@ -30,9 +30,9 @@ function App() {
           </div>
           <Routes>
             <Route path="/" element={<Home Language={language}/>} />
-            <Route path="/past" element={<About />} />
+            <Route path="/past" element={<About Language={language}/>} />
             <Route path="/experiences" element={<Experience Language={language} />} />
-            <Route path="/skills" element={<Skills />} />
+            <Route path="/skills" element={<Skills Language={language} />} />
             <Route path="/courses" element={<Courses />} />
           </Routes>
         </div>
