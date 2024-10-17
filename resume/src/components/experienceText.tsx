@@ -21,8 +21,8 @@ const Exp1: React.FC<Exp> = ({title,titulo, textOne, textoUno, textTwo,textoDos,
         <h2 className=" font-semibold ">{language?title:titulo}</h2>
         <p className="bb py-4 text-justify">{language?textOne:textoUno}</p>
         <div >
-        {open ? (<div><p className="py-4 text-justify">{language?textTwo:textoDos}</p> <a href={link} target="_blank" rel="noopener noreferrer"><p className='lmb py-2'>I wana know more</p></a><p className='lmb py-4' onClick={handleClick}>Less..</p></div>)
-        : (<p className="py-4 lmb" onClick={handleClick}>More...</p>)}
+        {open ? (<div><p className="py-4 text-justify">{language?textTwo:textoDos}</p> <a href={link} target="_blank" rel="noopener noreferrer"><p className='lmb py-2'>{language?'I want to know more':'Quiero saber mas'}</p></a><p className='lmb py-4' onClick={handleClick}>{language?'Less...':'menos...'}</p></div>)
+        : (<p className="py-4 lmb" onClick={handleClick}>{language?'More...':'Mas...'}</p>)}
         </div>
 
       </div>
