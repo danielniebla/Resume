@@ -1,18 +1,24 @@
-import React from "react";
+import React,{ useState } from "react";
 import Gito from "./getInTouch.tsx";
 
 interface imgLeft {
   title: string,
   titles: string,
-  text: React.ReactNode,
-  spanish: React.ReactNode,
+  text: string,
+  rText: string,
+  spanish: string,
+  rSpanish: string,
   img: string,
   horientation: boolean,
   language: boolean,
 
 }
 
-const Intro: React.FC<imgLeft> = ({title,titles, text, img, horientation,language,spanish}) => {
+const Intro: React.FC<imgLeft> = ({title,titles, text, img, horientation,language,spanish,rSpanish,rText}) => {
+  const [open, setOpen] = useState(false);
+  const handleClick = () => { 
+    setOpen(!open);
+  };
   return (
     <div>
     { horientation ?
@@ -25,7 +31,9 @@ const Intro: React.FC<imgLeft> = ({title,titles, text, img, horientation,languag
             <h2 className=" font-semibold">{language?title:titles}</h2>
             <Gito/>
           </div>
-          <p className="text-justify">{language?text:spanish} </p>
+          <p className="text-justify">{language?rText:rSpanish} </p>
+          {open ? (<div><p className="py-4 text-justify">{language?text:spanish}</p><p className='lmb py-4' onClick={handleClick}>{language?'Less...':'menos...'}</p></div>)
+        : (<p className="py-4 lmb" onClick={handleClick}>{language?'More...':'Mas...'}</p>)}
         </div>
       </div>)
     :
@@ -35,7 +43,9 @@ const Intro: React.FC<imgLeft> = ({title,titles, text, img, horientation,languag
             <h2 className=" font-semibold">{language?title:titles}</h2>
             <Gito/>
           </div>
-          <p className="text-justify">{language?text:spanish} </p>
+          <p className="text-justify">{language?rText:rSpanish} </p>
+          {open ? (<div><p className="py-4 text-justify">{language?text:spanish}</p><p className='lmb py-4' onClick={handleClick}>{language?'Less...':'menos...'}</p></div>)
+        : (<p className="py-4 lmb" onClick={handleClick}>{language?'More...':'Mas...'}</p>)}
         </div>
         <div className=" bl">
           <img src={img} alt="descriptive " className="rounded-2xl none rounded-bl-none rounded-tl-none" />

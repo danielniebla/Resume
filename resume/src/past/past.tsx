@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import Gito from '../components/getInTouch.tsx';
 import wal from '../assets/whatIAspire.png';
 import Intro from '../components/introduction.tsx';
@@ -7,21 +7,28 @@ interface pastprops {
     Language:boolean;
 }
 const Past: React.FC<pastprops> = ({Language}) =>{
+    const [open, setOpen] = useState(false);
+  const handleClick = () => { 
+    setOpen(!open);
+  };
     return (
         <div className='p-4' >
             <div className="box-1 rounded-2xl p-4 flex">
                 <div>
                     <h2 className=" font-semibold">{Language?"My past before IT":"Mi pasado antes del area de software"}</h2>
-                    <p>{Language?"Someone suggested that the interpersonal skills I’ve gained in other areas could be a great addition to my résumé. I’ll highlight my soft skills for each job, keeping it concise, but I won’t include this in my résumé as they only serve to showcase these specific abilities.":"Alguien me dijo que las aptitudes interpersonales que he adquirido en otras áreas podrían ser un gran añadido a mi currículum, así que intentaré destacar mis habilidades para cada empleo, tratare de ser consiso sin embargo esto es util para dar a conocer mis habilidades blandas unicamente, por ello no lo incluyo en mi curriculum."}</p>
+                    <p>{Language?"If you would like to know more about my soft skills, I will leave some unrelated experiences, as I was recommended to include them to demonstrate transferable skills. However, if you do not consider this section important, I hope you have found enough relevant information about me.":"Si desean conocer más sobre mis habilidades blandas, dejaré algunas experiencias no relacionadas, ya que me recomendaron incluirlas para demostrar habilidades transferibles. Sin embargo, si no consideran esta sección importante, espero que hayan encontrado suficiente información relevante sobre mí."}</p>
                 </div>
                 <Gito  />
             </div>  
             <div className='p-8'> {Language?"I am working on the images, I will include them in the future, thanks for your patience!":"Estoy trabajando en las imagenes, en un futuro las incluire, gracias por su paciencia!"}
+            {open ? (<div>
                 <Intro
                 title='Pizza seller' 
                 titles='vendedor de pizzas'
-                text='My most recent job, aside from my experience in software, was as a pizza seller at a stadium. This was an occasional role that helped me further improve my communication skills and ability to sell products effectively.'
-                spanish='Mi trabajo más reciente, aparte de mi experiencia en software, fue como vendedor de pizzas en un estadio. Fue una función por temporada que me ayudó a mejorar aún más mis dotes de comunicación y mi capacidad para vender productos con eficacia.'
+                rText='This occasional role helped me enhance my communication skills and ability to sell products effectively.'
+                rSpanish='Este trabajo ocasional me ayudó a mejorar mis habilidades de comunicación y mi capacidad para vender productos con eficacia.'
+                text='Stepping out of my routine and working with a variety of people allowed me to perform smoothly in different environments.'
+                spanish='Salir de mi rutina y trabajar con gente variada me permitió desenvolverme con soltura en distintos entornos.'
                 img={wal}
                 horientation={true}
                 language={Language}
@@ -29,8 +36,10 @@ const Past: React.FC<pastprops> = ({Language}) =>{
                 <Intro
                 title='Grocery clerk' 
                 titles='Encargado de abarrote'
-                text='During the COVID pandemic, my cousin opened a store, and I started helping him on weekends. This experience not only enhanced my customer service skills but also strengthened my sense of responsibility, managing 14-hour shifts.'
-                spanish="Durante la pandemia de COVID, mi primo abrió una tienda y empecé a ayudarle los fines de semana. Esta experiencia no solo mejoró mis habilidades de atención al cliente, sino que también reforzó mi sentido de la responsabilidad, gestionando turnos de 14 horas."
+                rText='Helping my cousin with his store during the COVID pandemic, I managed 14-hour shifts, which enhanced my customer service skills and sense of responsibility.'
+                text='This experience strengthened my ability to handle long workdays and stay committed under pressure.'
+                spanish="Esta experiencia reforzó mi capacidad para afrontar largas jornadas de trabajo y mantener el compromiso bajo presión."
+                rSpanish='Ayudando a mi primo con su tienda durante la pandemia de COVID, gestioné turnos de 14 horas, lo que mejoró mis habilidades de atención al cliente y mi sentido de la responsabilidad.'
                 img={wal}
                 horientation={false}
                 language={Language}
@@ -39,8 +48,10 @@ const Past: React.FC<pastprops> = ({Language}) =>{
                 <Intro
                 title='Lifeguard' 
                 titles='Socorrista'
-                text='Then in 2019, someone asked me to cover for them as a lifeguard at a pool. Since people appreciated my work and knew me, I took several lifeguard courses and ended up working there for months until the pandemic. During this time, I honed my communication skills, developed a friendly and professional demeanor, and learned how to manage people while maintaining a calm and safe environment.'
-                spanish='Luego, en 2019, alguien me pidió que le cubriera como socorrista en una piscina. Como la gente apreciaba mi trabajo y me conocio, hice varios cursos de socorrista y acabé trabajando allí durante meses hasta la pandemia. Durante este tiempo, perfeccioné mis habilidades de comunicación, desarrollé un comportamiento amable y profesional, y aprendí a manejar a la gente mientras mantenía un ambiente tranquilo y seguro.'
+                rText='During this time, I honed my communication skills, developed a friendly and professional demeanor, and learned to manage people while maintaining a calm, safe environment.'
+                rSpanish='Durante este tiempo, perfeccioné mis habilidades de comunicación, desarrollé un comportamiento amable y profesional, y aprendí a manejar a las personas mientras mantenía un ambiente tranquilo y seguro.'
+                text='In 2019, I was asked to cover as a lifeguard at a pool, which led me to take several lifeguard courses and work there for months until the pandemic.'
+                spanish='En 2019 me pidieron cubrir como socorrista en una piscina, lo que me llevó a hacer varios cursos de socorrismo y a trabajar allí durante meses hasta la pandemia.'
                 img={wal}
                 horientation={true}
                 language={Language}
@@ -48,8 +59,10 @@ const Past: React.FC<pastprops> = ({Language}) =>{
                 <Intro
                 title='Electrician' 
                 titles='Electricista'
-                text='I finished my Technical High School in Mechatronics Engineering and started working as an Electrician. This job helped me improve my ability to follow instructions, manage tasks, and work efficiently on daily assignments. I worked from 2017 until 2019, when my boss lost clients due to the restrictions.'
-                spanish='Terminé el Bachillerato Técnico en Ingeniería Mecatrónica y empecé a trabajar como electricista. Este trabajo me ayudó a mejorar mi capacidad para seguir instrucciones, gestionar tareas y trabajar de forma eficiente en los encargos diarios. Trabajé desde 2017 hasta 2019, cuando mi jefe perdió clientes debido a las restricciones.'
+                text='I completed my Technical High School in Mechatronics Engineering and began working as an Electrician from 2017 until 2019.'
+                rText='This job improved my ability to follow instructions, manage tasks, and work efficiently on daily assignments.'
+                rSpanish='Este trabajo mejoró mi capacidad para seguir instrucciones, gestionar tareas y trabajar de manera eficiente en las asignaciones diarias.'
+                spanish='Terminé el Bachillerato Técnico en Ingeniería Mecatrónica y empecé a trabajar como Electricista desde 2017 hasta 2019.'
                 img={wal}
                 horientation={false}
                 language={Language}
@@ -57,8 +70,10 @@ const Past: React.FC<pastprops> = ({Language}) =>{
                 <Intro
                 title='Water Station Attendant' 
                 titles='Atencion de purificadora de agua'
-                text='My second job, from 2015 to 2017, was as a Water Station Attendant. In this role, I improved my soft skills by interacting with different types of people, who in this case were clients. This experience helped me grow in customer service and further develop my communication skills.'
-                spanish='Mi segundo trabajo, de 2015 a 2017, fue como encargado de una purificadora de agua. En este puesto, mejoré mis habilidades interpersonales interactuando con diferentes tipos de personas, que en este caso eran clientes. Esta experiencia me ayudó a crecer en la atención al cliente y a desarrollar aún más mis habilidades comunicativas.'
+                rText='This role helped me grow in customer service and further develop my communication skills by engaging with different types of people.'
+                text='From 2015 to 2017, I worked as a Water Station Attendant, interacting with a wide range of clients.'
+                rSpanish='Este papel me ayudó a crecer en el servicio al cliente y a desarrollar aún más mis habilidades de comunicación al relacionarme con diferentes tipos de personas.'
+                spanish='De 2015 a 2017, trabajé como Asistente de Estación de Agua, interactuando con una amplia gama de clientes.'
                 img={wal}
                 horientation={true}
                 language={Language}
@@ -66,12 +81,17 @@ const Past: React.FC<pastprops> = ({Language}) =>{
                 <Intro
                 title='Event Furniture Delivery' 
                 titles='Repartidor de mobiloario de eventos'
-                text='My first job, from 2012 to 2015 (when I was 12 to 16 years old), was as an Event Furniture Delivery person. During this time, I discovered my strength in engaging warmly with clients and developed a strong sense of responsibility. This role ended when my boss found another job and closed the business.'
-                spanish='Mi primer trabajo, de 2012 a 2015 (cuando tenía entre 12 y 16 años), fue como repartidora de mobiliario para eventos. Durante ese tiempo, descubrí que mi punto fuerte era el trato cordial con los clientes y desarrollé un gran sentido de la responsabilidad. Esta función terminó cuando mi jefe encontró otro trabajo y cerró el negocio.'
+                text='From 2012 to 2015, when I was 12 to 16 years old, I worked as an Event Furniture Delivery person.'
+                rText='During this time, I discovered my strength in engaging warmly with clients and developed a strong sense of responsibility. '
+                rSpanish='Durante este tiempo, descubrí mi destreza para relacionarme cordialmente con los clientes y desarrollé un gran sentido de la responsabilidad. El puesto terminó cuando mi jefe cerró el negocio tras encontrar otro trabajo.'
+                spanish='De 2012 a 2015, cuando tenía entre 12 y 16 años, trabajé como repartidor de mobiliario para eventos.'
                 img={wal}
                 horientation={false}
                 language={Language}
                 ></Intro>
+                <p className='lmb py-4 text-xl' onClick={handleClick}>{Language?'Less...':'menos...'}</p></div>)
+            : (<p className="py-4 lmb text-xl" onClick={handleClick}>{Language?'I want to know More...':'Quiero saber mas...'}</p>)}
+                
             </div>
         </div>
     )
