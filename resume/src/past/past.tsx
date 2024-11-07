@@ -20,8 +20,9 @@ const Past: React.FC<pastprops> = ({Language}) =>{
                 </div>
                 <Gito  />
             </div>  
-            <div className='p-8'> {Language?"I am working on the images, I will include them in the future, thanks for your patience!":"Estoy trabajando en las imagenes, en un futuro las incluire, gracias por su paciencia!"}
             {open ? (<div>
+                <div className='p-8'> {Language?"I am working on the images, I will include them in the future, thanks for your patience!":"Estoy trabajando en las imagenes, en un futuro las incluire, gracias por su paciencia!"}
+                </div>
                 <Intro
                 title='Pizza seller' 
                 titles='vendedor de pizzas'
@@ -92,7 +93,6 @@ const Past: React.FC<pastprops> = ({Language}) =>{
                 <p className='lmb py-4 text-xl' onClick={handleClick}>{Language?'Less...':'menos...'}</p></div>)
             : (<p className="py-4 lmb text-xl" onClick={handleClick}>{Language?'I want to know More...':'Quiero saber mas...'}</p>)}
                 
-            </div>
         </div>
     )
 };
