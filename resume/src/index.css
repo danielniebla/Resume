@@ -58,8 +58,7 @@ body {
 .text-justify {
   text-align: justify;
 }
-
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1080px) {
   .grid-5-1{
     display: grid;
     grid-template-columns: 6fr 1fr ;
@@ -70,6 +69,22 @@ body {
     grid-template-columns: 1fr 6fr ;
     gap: .5rem;
   }
+}
+
+@media only screen and (min-width: 768px) and ( max-width: 1080px) {
+  .grid-5-1{
+    display: grid;
+    grid-template-columns: 4fr 1fr ;
+    gap: .5rem;
+  }
+  .grid-1-5{
+    display: grid;
+    grid-template-columns: 1fr 4fr ;
+    gap: .5rem;
+  }
+
+}
+@media only screen and (min-width: 768px) {
   .bl{
     padding-left: .5rem ;
     border-left: 2px dashed #A8CBE1;
