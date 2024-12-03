@@ -17,7 +17,7 @@ const Home: React.FC<homeprops> = ({Language}) =>{
                 text="I am passionate about developing intuitive applications and turning data into valuable insights. I am looking for a role where I can apply my skills in development and optimization while contributing to the company's growth." 
                 spanish='Me apasiona desarrollar aplicaciones intuitivas y convertir datos en información valiosa. Busco un puesto en el que pueda aplicar mis habilidades en desarrollo y optimización mientras contribuyo al crecimiento de la empresa.'
                 rText="I am a full-stack software engineer with solid background and experience, recognized for my attention to detail and user-focused approach. I adapt quickly to new challenges and collaborate effectively to deliver high-quality solutions."
-                rSpanish="Soy un ingeniero de software full-stack con dos años de experiencia, reconocido por mi atención al detalle y enfoque centrado en el usuario. Me adapto rápidamente a nuevos retos y colaboro eficazmente para ofrecer soluciones de alta calidad."
+                rSpanish="Soy un ingeniero de software full-stack con sólida formación y experiencia, reconocido por mi atención al detalle y enfoque centrado en el usuario. Me adapto rápidamente a nuevos retos y colaboro eficazmente para ofrecer soluciones de alta calidad."
                 img={perfil}
                 horientation={true}
                 language={Language}
